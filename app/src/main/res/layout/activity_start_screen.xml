@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE5D4"
+    android:orientation="vertical"
+    tools:context=".StartScreen">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="285dp"
+        app:srcCompat="@drawable/bawarchihero" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Your Food Experience With Us!"
+        android:layout_marginTop="96dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="28sp"
+        android:textAlignment="center"
+        android:textColor="#C2373D"
+        android:fontFamily="sans-serif-medium"
+        android:includeFontPadding="true"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonLoginStartScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:textColor="#F5C33B"
+        android:backgroundTint="#C2373D"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/buttonSignupStartScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="#F5C33B"
+        android:backgroundTint="#C2373D"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"/>
+</LinearLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE5D4"
+    android:orientation="vertical"
+    tools:context=".SignUpScreen">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="280dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/bawarchilogoforscreens" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:includeFontPadding="true"
+        android:text="Create an Account"
+        android:textAlignment="center"
+        android:textColor="#C2373D"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/editTextTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Enter your Username"
+        android:inputType="text"
+        android:padding="6dp"
+        android:textColor="#133240"
+        android:textColorHint="#133240"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="example@gmail.com"
+        android:inputType="textEmailAddress"
+        android:padding="6dp"
+        android:textColor="#133240"
+        android:textColorHint="#133240"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Enter your Phone Number"
+        android:inputType="phone"
+        android:padding="6dp"
+        android:textColor="#133240"
+        android:textColorHint="#133240"
+        android:textSize="16sp" />
+
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/rounded_edittext"
+        android:drawableEnd="@drawable/ic_visibility_off"
+        android:drawablePadding="6dp"
+        android:drawableTint="#C2373D"
+        android:ems="10"
+        android:hint="Enter Your Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="#133240"
+        android:textColorHint="#133240"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/buttonSignupScreenMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#C2373D"
+        android:text="Sign up"
+        android:textColor="#F5C33B" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+        <!-- Left Line -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#133240" />
+
+        <!-- Sign Up Text -->
+        <TextView
+            android:id="@+id/signUpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="or continue with"
+            android:textColor="#133240"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <!-- Right Line -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#133240" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/googleSignInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_edittext"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <!-- Google Logo -->
+        <ImageView
+            android:id="@+id/googleLogo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/google_icon" />
+
+        <!-- Text 'Google' -->
+        <TextView
+            android:id="@+id/googleSignInText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:text=" Sign up with Google"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <!-- "Don't have an account?" Text -->
+        <TextView
+            android:id="@+id/textViewAccountPrompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="Already have an account?"
+            android:textAlignment="center"
+            android:textColor="#133240"
+            android:textSize="15sp" />
+
+        <!-- "Sign Up" Text (Clickable) -->
+        <TextView
+            android:id="@+id/textViewSignUp"
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textColor="#C2373D"
+            android:textSize="15sp"
+            android:textStyle="bold|normal"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+</LinearLayout>
