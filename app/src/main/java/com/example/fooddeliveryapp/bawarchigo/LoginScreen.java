@@ -15,12 +15,16 @@ public class LoginScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login_screen);
 
+        // Enable Edge to Edge after setting the content view
+        EdgeToEdge.enable(this);
+
+        // Initialize button after setting the content view
         Button loginMainButton = findViewById(R.id.buttonLoginScreenMain);
 
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_login_screen);
+        // Set up padding for the main view
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -31,11 +35,10 @@ public class LoginScreen extends AppCompatActivity {
         loginMainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Intent to navigate to LoginScreen
+                // Intent to navigate to HomeScreen
                 Intent intent = new Intent(LoginScreen.this, HomeScreen.class);
                 startActivity(intent);
             }
         });
-
     }
 }

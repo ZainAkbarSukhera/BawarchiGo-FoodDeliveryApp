@@ -15,12 +15,17 @@ public class StartScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_start_screen);
+
+        // Enable Edge to Edge after setting the content view
+        EdgeToEdge.enable(this);
+
+        // Initialize buttons after setting the content view
         Button loginButton = findViewById(R.id.buttonLoginStartScreen);
         Button signupButton = findViewById(R.id.buttonSignupStartScreen);
 
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_start_screen);
+        // Set up padding for the main view
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -46,6 +51,5 @@ public class StartScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }

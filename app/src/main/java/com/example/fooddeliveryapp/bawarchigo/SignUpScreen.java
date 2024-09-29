@@ -1,6 +1,5 @@
 package com.example.fooddeliveryapp.bawarchigo;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,11 +15,16 @@ public class SignUpScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        Button signUpButtonMain = findViewById(R.id.buttonSignupScreenMain);
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_sign_up_screen);
+
+        // Enable Edge to Edge after setting the content view
+        EdgeToEdge.enable(this);
+
+        // Initialize button after setting the content view
+        Button signUpButtonMain = findViewById(R.id.buttonSignupScreenMain);
+
+        // Set up padding for the main view
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -31,11 +35,10 @@ public class SignUpScreen extends AppCompatActivity {
         signUpButtonMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Intent to navigate to SignupScreen
+                // Intent to navigate to HomeScreen
                 Intent intent = new Intent(SignUpScreen.this, HomeScreen.class);
                 startActivity(intent);
             }
         });
     }
 }
-

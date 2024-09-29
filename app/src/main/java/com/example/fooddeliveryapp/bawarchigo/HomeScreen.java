@@ -43,7 +43,8 @@ public class HomeScreen extends AppCompatActivity {
                 R.id.navigation_home, R.id.navigation_cart, R.id.navigation_notifications, R.id.navigation_settings)
                 .build();
 
-        NavController navController = Navigation.findNavController(this, R.id.navigation_home);
+        // Ensure you are getting the NavController from the correct NavHostFragment
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment); // Change if needed
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
@@ -91,5 +92,11 @@ public class HomeScreen extends AppCompatActivity {
         restaurantList.add(new Restaurant("Sushi World", "3.2 km", "4.2 ★", R.drawable.restaurant3));
         restaurantList.add(new Restaurant("Pasta House", "4.5 km", "4.5 ★", R.drawable.restaurant4));
         restaurantList.add(new Restaurant("Taco Haven", "5.0 km", "4.1 ★", R.drawable.restaurant5));
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        return navController.navigateUp() || super.onSupportNavigateUp();
     }
 }
